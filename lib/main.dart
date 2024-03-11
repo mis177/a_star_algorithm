@@ -1,8 +1,11 @@
+import 'package:a_star_algorithm/models/path_model.dart';
 import 'package:a_star_algorithm/views/path_view.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(ChangeNotifierProvider(
+      create: (_) => PathModel(), child: const MainApp()));
 }
 
 class MainApp extends StatelessWidget {
